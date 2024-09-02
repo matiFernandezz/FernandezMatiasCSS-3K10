@@ -1,0 +1,195 @@
+
+header{
+    background-color: bisque;
+    text-align: center;
+}
+main{
+    background-color: white;
+    .parrafo1{
+        color: rgb(139, 127, 113);
+        text-decoration: underline;
+        text-decoration-color: black;
+        text-align: justify;
+        font-size: 16px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .cita{
+        font-size: 16px;
+        background-color: #f2f2f2;
+        padding: 10px;
+        max-width: auto;
+        border-left: 3px solid gray;
+    }
+    .caja1{
+        background-color: aliceblue;
+        width: auto;
+        height: 25px;
+        padding: 0.5rem;
+        margin: 1rem;
+        border: 1px solid black;
+        border-radius: 0.5rem;
+        box-shadow: 5px 4px 10px 2px black;
+        
+    }
+    .caja2{
+        background-color: coral;
+        width: auto;
+        height: 25px;
+        padding: 0.5rem;
+        margin: 1rem;
+        border: 2px double black;
+        border-radius: 0.5rem;
+        box-shadow: 5px 4px 10px 2px black;
+    }
+    .relativo{
+        position: relative;
+        width: auto;
+        height: 40px;
+        background-color: cornflowerblue;
+        padding: 0.5rem;
+        margin: 1rem;
+        border: 1px solid black;
+        border-radius: 0.5rem;
+        box-shadow: 5px 4px 10px 2px black;
+    }
+    .absoluto {
+        position: absolute;
+        width: auto;
+        height: 40px;
+        background-color: blueviolet;
+        top: 50%;
+        left: 50%;
+        padding: 0.5rem;
+        margin: 1rem;
+        border: 2px dotted black;
+        border-radius: 0.5rem;
+        box-shadow: 5px 4px 10px 2px black;
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));      
+        gap: 1rem;
+    }
+    .grid-item{
+        background-color: orange;
+        text-align: center;
+        padding: 5px;
+        margin: 3px;
+        border: 1px  solid black;
+        border-radius: 0.5rem;
+    }
+    .animacion{
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+        margin: 5px;
+        background-color: green;
+        border: 1px  solid black;
+        transition: 1s;        
+    }
+    .animacion:hover{
+        cursor: pointer;
+        background-color: aquamarine;
+        border-radius: 0.5rem;
+    }
+    .mover{
+       width: 100px;
+       height: 100px;
+       border: 1px solid black;
+       border-radius: 5rem;
+       background-color: red;
+       padding: 5px;
+       margin: 5px;
+       animation: mover 2s infinite;
+    }
+}
+footer{
+    background-color: rgb(160, 106, 36);
+    p{
+        color: white;
+        font-size: small;
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    header{
+        background-color: lightblue;
+        h1{
+            font-size: large;
+        }
+    }
+    main{
+        background-color: cadetblue;
+        h2{
+            font-size: medium;
+        }
+        .parrafo1{
+            font-size: 12px;
+            color: black;
+            margin: 5px;
+            padding: 5px;
+        }
+        .cita{
+            font-size: 12px;
+        }
+        .cajas{
+            display: flex;
+            padding: 5px;
+            margin: 5px;
+            .caja1{
+                background-color: burlywood;
+                width: 50vw;
+                height: auto;
+            }
+            .caja2{
+                background-color: darkgray;
+                width: 50vw;
+                height: auto;
+            }
+        }
+        .relativo{
+            background-color: azure;
+
+        }
+        .absoluto{
+            background-color: brown;
+            top: 60%;
+            left: 15%;
+        }
+        .grid-item{
+            background-color: red
+        }
+        .animacion{
+            width: 70px;
+            height: 70px;
+            background-color: rgb(13, 206, 212);
+        }
+        .mover{
+            width: 70px;
+            height: 70px;
+            background-color: white;
+            animation: mover 1s infinite;
+        }
+    }
+    footer{
+        background-color: bisque;
+        p{
+            color: black;
+
+        }
+    }
+}
+
+@keyframes mover {
+    0%{
+        transform: translateX (0);
+    }
+    50%{
+        transform: translateX(200px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
